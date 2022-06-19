@@ -1,0 +1,17 @@
+pipeline {
+    agent { label 'agent-x1' }
+    stages {
+            stage ('Find hostname') {
+            steps { 
+                echo 'get hostname of the agent'
+                sh script: "hostname"
+               }
+            }
+	   stage ('List intances') {
+            steps { 
+                echo 'List instances running'
+                sh script: "ps -ef | grep smon"
+             }
+           }
+      }
+    }
