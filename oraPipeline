@@ -1,5 +1,5 @@
 pipeline {
-    @Library('JenkinsLibCICD')_
+    @Library('JenkinsLibCICD') _
     agent { label 'agent-x1' }
     stages {
             stage ('Find hostname') {
@@ -14,7 +14,7 @@ pipeline {
                 sh script: "ps -ef | grep smon"
              }
            }
-           stage ('Library Demo'){
+           stage ('Library Demo') {
                 echo 'Hello world'
                 sayHello 'Alex'
            }
