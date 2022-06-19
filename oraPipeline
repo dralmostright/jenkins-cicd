@@ -19,5 +19,10 @@ pipeline {
                 helloworld (name:"Alex",dayOfWeek:"Sunday")
                }
            }
+           stage ('Verify Database') {
+            steps {
+               executeSQL (username:"system",password:"tst123",dbtns:"tstdb",script:"getdbstatus.sql")
+               }
+           }
       }
     }
