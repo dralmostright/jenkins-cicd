@@ -17,7 +17,7 @@ pipeline {
            stage ('Library Demo') {
             steps {
                 echo 'Hello world'
-                helloworld ('Alex','Sunday')
+                helloworld (name:'Alex',dayOfWeek:'Sunday')
                }
            }
       }
