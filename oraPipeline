@@ -1,4 +1,5 @@
 pipeline {
+    @Library('JenkinsLibCICD')_
     agent { label 'agent-x1' }
     stages {
             stage ('Find hostname') {
@@ -12,6 +13,10 @@ pipeline {
                 echo 'List instances running'
                 sh script: "ps -ef | grep smon"
              }
+           }
+           stage ('Library Demo'){
+                echo 'Hello world'
+                sayHello 'Alex'
            }
       }
     }
