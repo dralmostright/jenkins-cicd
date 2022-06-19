@@ -1,7 +1,7 @@
-@Library('JenkinsLibCICD') _
 pipeline {
     agent { label 'agent-x1' }
-    stages {
+     @Library('JenkinsLibCICD') _
+     stages {
             stage ('Find hostname') {
             steps { 
                 echo 'get hostname of the agent'
