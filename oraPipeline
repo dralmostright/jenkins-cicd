@@ -1,5 +1,5 @@
+@Library('JenkinsLibCICD') _
 pipeline {
-    @Library('JenkinsLibCICD') _
     agent { label 'agent-x1' }
     stages {
             stage ('Find hostname') {
@@ -15,8 +15,10 @@ pipeline {
              }
            }
            stage ('Library Demo') {
+            steps {
                 echo 'Hello world'
                 sayHello 'Alex'
+               }
            }
       }
     }
