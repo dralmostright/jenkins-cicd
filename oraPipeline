@@ -21,6 +21,7 @@ pipeline {
            }
            stage ('Verify Database') {
             steps {
+               sh script: "pwd"
                executeSQL (username:"system",password:"tst123",dbtns:"tstdb",script:"getdbstatus.sql")
                }
            }
